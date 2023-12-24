@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="transactionForm">
+        <label for="sender">Sender:</label>
+        <input type="text" id="sender" name="sender" required>
+
+        <label for="receiver">Receiver:</label>
+        <input type="text" id="receiver" name="receiver" required>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message">
+
+        <button type="button" onclick="addTransaction()">Add Transaction</button>
+    </form>
+
+    <button onclick="mineBlock()">Mine Block</button>
+
+    <h2>Key Pairs</h2>
+    <div style="overflow-x: auto;">
+        <table id="keyPairs">
+            <thead>
+                <tr>
+                    <th>Entity</th>
+                    <th>Public Key (n)</th>
+                    <th>Private Key (d)</th>
+                </tr>
+            </thead>
+            <tbody id="keyPairsBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Transactions</h2>
+    <ul id="transactions"></ul>
+
+    <h2>Blockchain</h2>
+    <div style="overflow-x: auto;">
+        <table id="blockchain">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Timestamp</th>
+                    <th>Sender</th>
+                    <th>Sender Public Key (n)</th>
+                    <th>Receiver</th>
+                    <th>Receiver Public Key (n)</th>
+                    <th>Transactions</th>
+                    <th>Previous Hash</th>
+                    <th>Hash</th>
+                </tr>
+            </thead>
+            <tbody id="blockchainBody">
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

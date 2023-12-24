@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#transactions {
+    list-style: none;
+    padding: 0;
+}
+
+#transactions li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#blockchain {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#blockchain th, #blockchain td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#blockchain th {
+    background-color: #f2f2f2;
+}
